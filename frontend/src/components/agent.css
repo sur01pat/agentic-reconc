@@ -1,0 +1,61 @@
+.pipeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+/* Stage wrapper */
+.stage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Circle */
+.node {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.2s ease;
+}
+
+/* Subtle animation when running */
+.node.running {
+  animation: spin 2s linear infinite;
+  border-color: #111827;
+}
+
+/* Label */
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 20px;
+  color: #9ca3af;
+}
+
+/* Icon */
+.icon {
+  font-size: 28px;
+}
+
+/* Rotation animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.node {
+  cursor: help;
+}
